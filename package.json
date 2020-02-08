@@ -1,0 +1,11 @@
+{
+  "name": "TEST_OSM",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "query-overpass": "^1.5.5"
+  },
+  "scripts": {
+    "build": "query-overpass bikeInfraQuery.ql > bikeInfra.geojson"
+  }
+}
