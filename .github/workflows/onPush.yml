@@ -1,0 +1,22 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Generate new map
+      run: |
+        yarn install
+        yarn build
+    - name: Commit files
+      run: |
+        git config --local user.email "map@oaksandspokes.com"
+        git config --local user.name "Oaks and Spokes"
+        git commit -m "Automatically updated maps from github action" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
