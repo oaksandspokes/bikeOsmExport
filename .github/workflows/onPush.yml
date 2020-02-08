@@ -1,6 +1,9 @@
 name: CI
 
-on: [push]
+on:
+  push:
+    paths-ignore: 
+      - "*.geojson"
 
 jobs:
   build:
@@ -15,7 +18,8 @@ jobs:
       run: |
         git config --local user.email "map@oaksandspokes.com"
         git config --local user.name "Oaks and Spokes"
-        git commit -m "Automatically updated maps from github action" -a
+        git add *.geojson
+        git commit -m "Automatically updated maps from github action"
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
