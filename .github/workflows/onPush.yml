@@ -1,6 +1,11 @@
 name: CI
 
 on:
+  workflow_dispatch:
+    inputs:
+      tags:
+        default: 'manual run'
+        required: false
   push:
     paths-ignore: 
       - "*.geojson"
