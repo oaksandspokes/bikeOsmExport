@@ -45,6 +45,9 @@
   nwr
     ["crossing"="marked"]["bicycle"="designated"]["highway"="footway"]
     (35.447246055511,-79.189453125,36.117908916564,-78.22265625);
+  node
+  	["amenity"="bicycle_parking"]
+    (35.447246055511,-79.189453125,36.117908916564,-78.22265625);
 );
 out;
 >;
