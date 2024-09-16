@@ -6,6 +6,6 @@
     "query-overpass": "^1.5.5"
   },
   "scripts": {
-    "build": "query-overpass bikeInfraQuery.ql --flat-properties > bikeInfra.geojson"
+    "build": "query-overpass bikeInfraQuery.ql --flat-properties > bikeInfra.geojson & query-overpass bikeInfraOnlyMapQuery.overpassql --flat-properties > bikeInfraOnlyMap.geojson"
   }
 }
