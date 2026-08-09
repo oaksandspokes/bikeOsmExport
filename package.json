@@ -6,6 +6,6 @@
     "query-overpass": "^1.5.5"
   },
   "scripts": {
-    "build": "query-overpass bikeInfraQuery.ql --overpass-url https://overpass.private.coffee/api/interpreter --flat-properties > bikeInfra.geojson"
+    "build": "node queryOverpassCli.js bikeInfraQuery.ql --flat-properties > bikeInfra.geojson"
   }
 }
